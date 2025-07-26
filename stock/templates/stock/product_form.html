@@ -1,0 +1,24 @@
+{% extends 'stock/base.html' %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <p>
+        <label for="id_name">Name:</label><br>
+        {{ form.name }}
+    </p>
+    <p>
+        <label for="id_quantity">Quantity:</label><br>
+        {{ form.quantity }}
+    </p>
+    <p>
+        <label for="id_price">Price:</label><br>
+        {{ form.price }}
+    </p>
+    <p>
+        <label for="id_description">Description:</label><br>
+        {{ form.description }}
+    </p>
+    <button type="submit" class="btn">Save</button>
+</form>
+{% endblock %}
